@@ -1,6 +1,6 @@
 {
   "name": "@remax/babel-plugin-macros",
-  "version": "2.7.1",
+  "version": "2.7.2",
   "description": "Allows you to build compile-time libraries",
   "main": "dist/index.js",
   "scripts": {
