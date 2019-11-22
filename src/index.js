@@ -297,7 +297,8 @@ function getConfig(macro, filename, source, options) {
 
     if (
       optionsConfig.options === undefined &&
-      fileConfig.options === undefined
+      fileConfig.options === undefined &&
+      fileConfig.error !== undefined
     ) {
       // eslint-disable-next-line no-console
       console.error(
@@ -305,9 +306,7 @@ function getConfig(macro, filename, source, options) {
           `for the macro imported from "${source}. ` +
           `Please see the error thrown for more information.`,
       )
-      if (fileConfig.error !== undefined) {
-        throw fileConfig.error
-      }
+      throw fileConfig.error
     }
 
     if (
